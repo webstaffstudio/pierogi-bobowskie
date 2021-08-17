@@ -1,0 +1,254 @@
+/* stylelint-disable */
+@mixin placeholder {
+  &::-webkit-input-placeholder {
+    @content;
+  }
+  &:-moz-placeholder {
+    @content;
+  }
+  &::-moz-placeholder {
+    @content;
+  }
+  &:-ms-input-placeholder {
+    @content;
+  }
+}
+
+.contact {
+  background-color: $light;
+
+  .page-title {
+    color: $brown;
+  }
+
+  .subtitle {
+    color: $brown;
+    max-width: 890px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .grid-x {
+    .medium-8 {
+      @include breakpoint(768px down) {
+        width: 100%;
+      }
+    }
+
+    .medium-4 {
+      @include breakpoint(768px down) {
+        width: 100%;
+      }
+    }
+  }
+
+  &__info {
+    p {
+      font-size: 24px;
+      line-height: 32px;
+      @include breakpoint(1140px down) {
+        font-size: 20px;
+      }
+      @include breakpoint(medium down) {
+        font-size: 18px;
+      }
+      @include breakpoint(890px down) {
+        font-size: 16px;
+      }
+
+      strong {
+        font-weight: 600;
+        font-family: $regular;
+      }
+    }
+  }
+
+  form {
+    .form-column {
+      display: flex;
+      width: 100%;
+      @include breakpoint(768px down) {
+        display: block;
+      }
+
+      .wpcf7-form-control-wrap {
+        width: 100%;
+
+        &:first-child {
+          padding-right: 30px;
+        }
+
+        @include breakpoint(768px down) {
+          display: block;
+          &:first-child {
+            padding-right: 0;
+          }
+        }
+      }
+    }
+
+    .wpcf7-checkbox {
+      margin-bottom: 30px;
+      display: block;
+
+      .wpcf7-list-item {
+        margin: 0;
+
+        label {
+          display: flex;
+
+          span.wpcf7-list-item-label {
+            display: inline-block;
+            width: 100%;
+            position: relative;
+            bottom: 5px;
+            font-size: 16px;
+            line-height: 20px;
+            color: $brown;
+          }
+        }
+      }
+    }
+
+    input {
+      box-shadow: none;
+      background: #FFFFFF;
+      border: 2px solid #43322B;
+      padding: 24px 16px;
+      margin-bottom: 20px;
+      color: $brown;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 24px;
+      letter-spacing: 0.24em;
+
+      &:focus {
+        outline: none;
+        border: 2px solid $brown;
+      }
+
+
+      @include placeholder {
+        color: $brown;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 24px;
+        letter-spacing: 0.24em;
+      }
+    }
+
+    .main-btn {
+      background-color: $brown;
+      cursor: pointer;
+      max-width: 380px;
+      @include breakpoint(768px down) {
+        max-width: 100%;
+      }
+
+      &:hover {
+        background-color: $yellow;
+
+        .border-container {
+          border-color: $brown;
+        }
+
+        input {
+          color: $brown !important;
+          cursor: pointer;
+        }
+      }
+
+      p {
+        font-size: 0;
+      }
+
+      .border-container {
+        border-color: $light;
+      }
+
+      .ajax-loader {
+        position: absolute;
+        left: 0;
+        bottom: -31px;
+      }
+
+      input[type="submit"] {
+        width: 100%;
+        height: 100%;
+        display: inline-block;
+        border: none;
+        background: transparent;
+        color: $light;
+        text-transform: uppercase;
+        padding: 0;
+        margin-bottom: 0;
+        transition: $transition;
+        position: relative;
+        z-index: 2;
+      }
+    }
+
+
+    input[type="checkbox"] {
+      appearance: none;
+      height: 32px;
+      width: 32px;
+      display: inline-block;
+      position: relative;
+      padding: 0;
+      margin: 0;
+      margin-right: 26px;
+      cursor: pointer;
+
+      &:checked::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: block;
+        height: 28px;
+        width: 28px;
+        background-image: url("assets/images/checked.png");
+        background-repeat: no-repeat;
+        background-size: 18px;
+        background-position: center;
+      }
+    }
+
+    textarea {
+      box-shadow: none;
+      background: #FFFFFF;
+      border: 2px solid #43322B;
+      resize: none;
+      padding: 24px 16px;
+      height: 240px;
+      color: $brown;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 24px;
+      letter-spacing: 0.24em;
+      margin-bottom: 30px;
+
+      &:focus {
+        outline: none;
+        border: 2px solid $brown;
+      }
+
+      @include placeholder {
+        color: $brown;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 24px;
+        letter-spacing: 0.24em;
+      }
+    }
+
+    br {
+      display: none;
+    }
+    .wpcf7-not-valid-tip {
+      color: red;
+      font-weight: 600;
+    }
+  }
+}

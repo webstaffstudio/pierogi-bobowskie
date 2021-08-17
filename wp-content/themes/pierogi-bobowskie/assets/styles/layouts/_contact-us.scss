@@ -1,0 +1,47 @@
+/* stylelint-disable */
+.contact-us {
+  &__text {
+    font-family: $regular;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 56px;
+    color: $light;
+    max-width: 900px;
+    text-align: center;
+    margin: 0 auto 30px;
+    @include breakpoint(medium down) {
+      font-size: 36px;
+      line-height: 46px;
+    }
+    @include breakpoint(small down) {
+      font-size: 28px;
+      line-height: 38px;
+    }
+  }
+
+  &__links {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    @include breakpoint(660px down) {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .main-btn {
+      margin-right: 30px;
+      @include breakpoint(660px down) {
+        margin-right: 0;
+        margin-bottom: 26px;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      a {
+        color: $brown;
+      }
+    }
+  }
+}

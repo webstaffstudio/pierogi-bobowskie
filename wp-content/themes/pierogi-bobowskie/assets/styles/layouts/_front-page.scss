@@ -1,0 +1,54 @@
+/* stylelint-disable */
+.home-hero {
+  height: 840px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  @include breakpoint(medium down) {
+    height: 580px;
+  }
+
+  .grid-container {
+    position: initial;
+  }
+}
+
+.about {
+  background-color: #FCF2E6;
+  color: $brown;
+
+  .grid-container {
+    max-width: 1105px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  h2 {
+    text-align: center;
+    font-weight: 600;
+    font-size: 48px;
+    @include breakpoint(medium down) {
+      font-size: 36px;
+    }
+  }
+
+  &__descr {
+    font-size: 20px;
+  }
+
+  .about-image-wrapper {
+    max-width: 1260px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 62px;
+  }
+
+  &__img {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+}

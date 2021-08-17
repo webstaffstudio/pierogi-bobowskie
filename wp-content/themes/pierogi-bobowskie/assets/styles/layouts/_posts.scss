@@ -1,0 +1,340 @@
+/* stylelint-disable */
+$tablet: 940px;
+.product-terms {
+  .grid-container {
+    max-width: 1116px;
+  }
+
+  .page-title {
+    color: $light;
+  }
+
+  .subtitle {
+    color: $light;
+  }
+
+  &__list {
+    display: flex;
+    width: 100%;
+
+    .grid-x {
+      width: 100%;
+
+
+      .cell {
+        justify-content: center;
+      }
+    }
+
+    .main-btn {
+      margin-bottom: 34px;
+      @include breakpoint(small down) {
+        max-width: 100%;
+      }
+
+      &.active {
+        background-color: $yellow;
+      }
+
+      a {
+        color: $brown;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .our-products__list {
+    margin-top: 46px;
+
+    .main-btn {
+      a {
+        color: $brown;
+      }
+    }
+  }
+
+
+}
+
+.tax-pierogi_categories {
+  .contact-us {
+    background-color: $light;
+
+    .border-container {
+      border-color: $brown;
+    }
+
+    &__text {
+      color: $brown;
+    }
+
+    &__links {
+
+
+      .main-btn {
+        background-color: $brown;
+
+        &:hover {
+          .border-container {
+            border-color: $yellow;
+          }
+
+          a {
+            color: $yellow;
+          }
+        }
+
+        .border-container {
+          border-color: $light;
+        }
+
+        a {
+          color: $light;
+        }
+      }
+    }
+  }
+}
+
+.single {
+  .hero-post {
+    .grid-container {
+      max-width: 1352px; //1280
+    }
+
+    .grid-x {
+      padding: 208px 0 0;
+
+      @include breakpoint(639px down) {
+        padding: 100px 0 0;
+      }
+
+      .medium-6 {
+        @include breakpoint($tablet down) {
+          width: 100%;
+        }
+      }
+    }
+
+    &__title {
+      color: $light;
+      font-weight: 600;
+      font-size: 48px;
+      line-height: 56px;
+      margin-bottom: 30px;
+      max-width: 545px;
+      width: 100%;
+      @include breakpoint(600px down) {
+        font-size: 38px;
+        line-height: 48px;
+      }
+      @include breakpoint(450px down) {
+        font-size: 34px;
+        line-height: 44px;
+      }
+    }
+
+    &__description {
+      color: $light;
+      max-width: 600px;
+      width: 100%;
+      margin-bottom: 30px;
+    }
+
+    &__badges {
+      margin: 0 auto;
+      max-width: 800px;
+      display: flex;
+      justify-content: flex-start;
+
+      img {
+        margin-right: 46px;
+        height: auto;
+        object-fit: contain;
+        object-position: top;
+
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+
+    &__image {
+      position: relative;
+      bottom: 40px;
+      @include breakpoint($tablet down) {
+        max-width: 500px;
+        width: 100%;
+        margin-top: 60px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+  }
+
+  .product__main-background {
+    height: 900px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    @include breakpoint(medium down) {
+      height: 560px;
+    }
+    @include breakpoint(small down) {
+      height: 400px;
+    }
+  }
+
+  .properties {
+    .border-container {
+      &.light {
+        border-color: $light;
+      }
+    }
+
+    .grid-container {
+      max-width: 1352px; //1280
+    }
+
+    &__title {
+      .page-title {
+        color: $light;
+        margin-bottom: 60px;
+      }
+    }
+
+    &__items {
+      display: inline-block;
+      margin-bottom: 120px;
+      @include breakpoint(medium down) {
+        margin-bottom: 70px;
+      }
+      @include breakpoint(small down) {
+        margin-bottom: 50px;
+      }
+
+      &-img {
+        width: 100%;
+        margin-bottom: 30px;
+
+        .img-container {
+          border: 2px solid #FCF2E6;
+          background-color: $green;
+          padding: 74px 0;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          @include breakpoint(medium down) {
+            padding-top: 34px;
+            padding-bottom: 34px;
+          }
+          @include breakpoint(small down) {
+            img {
+              height: 330px;
+            }
+          }
+
+        }
+      }
+
+      &-content {
+        width: 100%;
+        background-color: $green;
+        border: 2px solid #FCF2E6;
+        color: $light;
+        margin-bottom: 30px;
+        display: flex;
+        padding: 34.45px 17px;
+        align-items: self-start;
+        @include breakpoint(medium down) {
+          padding-top: 25px;
+          padding-bottom: 25px;
+        }
+        @include breakpoint(small down) {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        &.netto {
+          @include breakpoint(small down) {
+            text-align: left;
+            align-items: flex-start;
+          }
+        }
+
+        img {
+          margin-top: 6px;
+          margin-right: 30px;
+          @include breakpoint(small down) {
+            margin-right: 0;
+            margin-bottom: 30px;
+          }
+        }
+
+        .property-descr {
+
+          p {
+            color: $light;
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+
+    &__table {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+
+      &-title {
+        color: $light;
+      }
+
+      &-body {
+        width: 100%;
+        margin: 0 auto;
+      }
+    }
+  }
+
+
+  .contact-us {
+    background-color: $light;
+
+    &__text {
+      color: $brown;
+      max-width: 580px;
+    }
+
+    .main-btn {
+      background-color: $brown;
+
+      .border-container {
+        border-color: $light;
+      }
+
+      a {
+        color: $light;
+      }
+    }
+
+    .cell {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+}
+
+.cell-thumb {
+  @include breakpoint(1023px down) {
+    max-width: 500px;
+    width: 100%;
+    margin: 30px auto 0;
+  }
+}

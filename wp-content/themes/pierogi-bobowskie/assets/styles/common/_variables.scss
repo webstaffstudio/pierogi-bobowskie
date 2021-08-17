@@ -1,0 +1,21 @@
+@import "~foundation-sites/scss/util/util";
+// Go to '../../../node_modules/foundation-sites/scss/settings/_settings.scss' and set you own Foundation Settings here
+/* stylelint-disable */
+/** Colors */
+$foundation-palette: (
+  primary: #27ae60,
+  secondary: #1866ff,
+  success: #3adb76,
+  warning: #ffae00,
+  alert: #cc4b37
+);
+$light : #FCF2E6;
+$brown: #43322B;
+$yellow : #FFDD5E;
+$green : #6A7030;
+//fonts
+$regular : 'Montserrat Regular';
+$bold : 'Montserrat Bold';
+
+//other
+$transition : 0.3s ease-in-out;
